@@ -22,13 +22,56 @@ function multiply(firstNumber: number, secondNumber?: number, base: number = 2){
 }
 
 
-
-const result: number = addNumbers(1,2);
-const result2: string = addNumbersFlecha(1,2);
-const multiplyResult: number = multiply(5);
+// const result: number = addNumbers(1,2);
+// const result2: string = addNumbersFlecha(1,2);
+// const multiplyResult: number = multiply(5);
 
 // Impriimir como objeto solo para poder ver mas claro el resultado
-console.log({result, result2, multiplyResult});
+// console.log({result, result2, multiplyResult});
+
+
+/* 
+ * Funciones con objetos como argumentos 
+ */
+
+interface Character {
+    name: string;
+    hp: number;
+    showHp: () => void;
+}
+
+const healCharacter = (character: Character, amount: number) => {
+    character.hp += amount;
+}
+
+const strider: Character = {
+    name: 'Strider/Aragon',
+    hp: 50,
+    showHp() {
+        console.log(`Puntos de Vida: ${ this.hp }`);
+    }
+}
+
+healCharacter(strider, 10);
+healCharacter(strider, 30);
+
+strider.showHp();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
