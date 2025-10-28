@@ -49,8 +49,8 @@ export function taxCalculation(options: TaxCalculationOptions): [number, number]
   return [total, total * tax];
 }
 
-const shoppingCart = [phone, tablet];
-const tax = 0.15;
+// const shoppingCart = [phone, tablet];
+// const tax = 0.15;
 
 // const result = taxCalculation({
 //     products: shoppingCart,
